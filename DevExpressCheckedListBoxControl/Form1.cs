@@ -33,5 +33,15 @@ namespace DevExpressCheckedListBoxControl
                 checkedListBoxControl1.ValueMember = "PromotionKey";
             }
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            List<DimPromotion> lista = new List<DimPromotion>();
+
+            foreach(var item in checkedListBoxControl1.CheckedItems)
+            {
+                lista.Add((DimPromotion)item); //add checked items to the list
+            }
+        }
     }
 }
